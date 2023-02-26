@@ -14,7 +14,15 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   font-family: "Pt Sans", sans-serif;
   font-size: 22px;
   line-height: 26px;
@@ -26,7 +34,55 @@ ul {
   list-style-type: none;
 }
 
+/* .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+} */
+
+.page-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
 /* Header */
+.page-header {
+  background-color: inherit;
+
+}
+
+.navigation {
+  display: flex;
+  padding-right: 70px;
+  padding-left: 70px;
+}
+
+.logo-link {
+  display: block;
+}
+
+.navigation-list, .navigation-user {
+  margin: 0;
+  padding: 0;
+}
+
+.navigation-list {
+  width: 339px;
+  margin-left: 30px;
+}
+
+.navigation-user {
+  max-width: 268px;
+  margin-left: auto;
+}
+
 .navigation-link, .navigation-user-link {
   color: #333333;
   text-decoration: none;
@@ -37,7 +93,7 @@ ul {
 }
 
 .fav-count {
-  background: #7DB54F;
+  background-color: #7DB54F;
   border-radius: 10px;
   color: #ffffff;
   text-align: center;
@@ -47,7 +103,7 @@ ul {
 }
 
 .button {
-  background: #756157;
+  background-color: #756157;
   border-radius: 4px;
   text-transform: uppercase;
   font-family: "Pt Sans", sans-serif;
@@ -58,10 +114,29 @@ ul {
 }
 
 /* Main page */
+.main-container {
+  flex-grow: 1;
+}
+
 .welcome {
+  background-color:#756157;
   background-image: url("../img/main/index-background.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
+}
+
+.welcome-img {
+  display: block;
+  margin: 0 auto;
+}
+
+.reasons-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 69px 0;
+  margin: 0 auto;
 }
 
 .reasons-title, .services-title, .search-title {
@@ -73,7 +148,24 @@ ul {
   line-height: 28px;
 }
 
+.reasons-title {
+  width: 620px;
+}
+
+.reasons-list, .services-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.reasons-list {
+  flex-wrap: wrap;
+}
+
 .reasons-item-title, .services-item-title {
+  font-size: 24px;
+  line-height: 28px;
   text-transform: uppercase;
   text-align: center;
 }
@@ -102,6 +194,21 @@ ul {
   text-align: center;
 }
 
+.services-item {
+  background-color: rgba(131, 179, 211, 0.12);
+  padding: 81px 85px;
+}
+
+.item-food {
+  background-color: transparent;
+}
+
+.search {
+  width: 592px;
+  text-align: center;
+  padding: 96px 304px;
+}
+
 .search-link {
   color: #ffffff;
   background-color: #756157;
@@ -120,13 +227,20 @@ ul {
   font-weight: 700;
 }
 
+.footer-container {
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
 .footer-subscription {
-  width: 1200px;
-  height: 415px;
+  background-color:#756157;
   background-image: url("../img/subscribe-background.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
   color: #ffffff;
+  padding: 96px 258px 104px 258px;
+  text-align: center;
 }
 
 .footer-subscription-title {
@@ -134,12 +248,10 @@ ul {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
-  text-align: center;
 }
 
 .footer-subscription-description {
   font-weight: 400;
-  text-align: center;
 }
 
 .footer-subscription-email {
@@ -147,7 +259,7 @@ ul {
 }
 
 .footer-subscription-button {
-  background: #82B3D3;
+  background-color: #82B3D3;
   border-radius: 0 4px 4px 0;
   color: #ffffff;
   font-family: 'PT Sans';
@@ -155,31 +267,57 @@ ul {
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
-  text-align: center;
   text-transform: uppercase;
 }
 
+.footer-social {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 70px 30px 70px;
+}
+
+.footer-social-list {
+  width: 142px;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
 .footer-company-phone {
+  width: 331px;
   color: inherit;
   font-weight: 400;
   font-size: 40px;
   line-height: 40px;
   text-align: center;
   text-transform: uppercase;
+  text-decoration: none;
+}
+
+.footer-company-link {
+  max-width: 115px;
+  margin-left: auto;
 }
 
 /* Catalog */
-.inner-filter {
+.filter-background {
   color: #ffffff;
   background-image: url(../img/catalog/catalog-background.jpg);
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
+  padding: 35px 70px 70px;
 }
 
 .filter-title {
   font-weight: 700;
   font-size: 60px;
   line-height: 78px;
+  margin: 0;
+}
+
+.breadcrumbs {
+  margin: 0;
+  padding: 0;
 }
 
 .breadcrumbs-item-main {
@@ -196,6 +334,34 @@ ul {
   text-decoration: none;
 }
 
+.housing-filter {
+  display: flex;
+}
+
+.filter-facilities, .filter-housing-type {
+  width: 151px;
+  margin-left: 0;
+}
+
+.filter-facilities {
+  margin-right: 70px;
+}
+
+.filter-housing-type {
+  margin-right: 140px;
+}
+
+.filter-price {
+  width: 288px;
+  margin-left: 0;
+  margin-right: 70px;
+}
+
+.filter-buttons {
+  max-width: 191px;
+  margin-left: 0;
+}
+
 .facilities-title, .housing-type-title, .price-title {
   font-weight: 700;
   font-size: 20px;
@@ -203,6 +369,7 @@ ul {
 }
 
 .filter-label {
+  display: block;
   font-weight: 400;
   font-size: 18px;
   line-height: 23px;
@@ -227,7 +394,7 @@ ul {
 }
 
 .price-setter {
-  background: #ffffff;
+  background-color: #ffffff;
   border-radius: 5px;
 }
 
@@ -240,11 +407,31 @@ ul {
 }
 
 /* Catalog list */
+.results-page {
+  display: flex;
+  flex-direction: column;
+  width: 1060px;
+  margin: 0 auto;
+  padding-top: 50px;
+  padding-bottom: 60px;
+}
+
+.housing-list-header {
+  display: flex;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
 .housing-list-title {
   color: #000000;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+  text-align: start;
+  width: 340px;
+  margin: 0;
+  padding: 0;
+  margin-right: 192px;
 }
 
 .housing-list-sort, .item-type, .item-price {
@@ -253,12 +440,48 @@ ul {
   line-height: 21px;
 }
 
+.housing-list-sort {
+  width: 292px;
+}
+
+.housing-list-view {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 160px;
+  margin-left: auto;
+}
+
+.housing-items-wrapper {
+  margin: 0 auto;
+}
+
+.housing-list-items {
+  margin: 0;
+  padding: 0;
+}
+
+.housing-item {
+  border: 1px solid #e6e6e6;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 340px;
+  padding: 20px;
+}
+
 .item-link {
   color: #000000;
   text-decoration: none;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
+  display: block;
+}
+
+.item-type-price {
+  display: flex;
+  justify-content: space-between;
 }
 
 .button-favorite {
@@ -279,7 +502,22 @@ ul {
   text-transform: uppercase;
 }
 
+.pagination-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.pagination-item:not(:last-child) {
+  margin-right: 8px;
+}
+
 .pagination-link {
+  display: block;
+  box-sizing: border-box;
+  width: 60px;
+  height: 60px;
+  padding: 11px 23px;
   background-color: #82B3D3;
   border-radius: 4px;
   color: #ffffff;
@@ -289,6 +527,10 @@ ul {
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
+}
+
+.pagination-link:last-child {
+  padding: 11px 16px;
 }
 
 .pagination-prev {
