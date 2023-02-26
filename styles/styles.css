@@ -60,7 +60,7 @@ ul {
 }
 
 .navigation-user {
-  width: 268px;
+  max-width: 268px;
   margin-left: auto;
 }
 
@@ -99,10 +99,29 @@ ul {
   flex-grow: 1;
 }
 
+.page-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
 .welcome {
   background-image: url("../img/main/index-background.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
+}
+
+.welcome-img {
+  display: block;
+  margin: 0 auto;
+}
+
+.reasons-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 69px 0;
+  margin: 0 auto;
 }
 
 .reasons-title, .services-title, .search-title {
@@ -114,7 +133,24 @@ ul {
   line-height: 28px;
 }
 
+.reasons-title {
+  width: 620px;
+}
+
+.reasons-list, .services-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.reasons-list {
+  flex-wrap: wrap;
+}
+
 .reasons-item-title, .services-item-title {
+  font-size: 24px;
+  line-height: 28px;
   text-transform: uppercase;
   text-align: center;
 }
@@ -143,6 +179,21 @@ ul {
   text-align: center;
 }
 
+.services-item {
+  background-color: rgba(131, 179, 211, 0.12);
+  padding: 81px 85px;
+}
+
+.item-food {
+  background-color: transparent;
+}
+
+.search {
+  width: 592px;
+  text-align: center;
+  padding: 96px 304px;
+}
+
 .search-link {
   color: #ffffff;
   background-color: #756157;
@@ -161,13 +212,20 @@ ul {
   font-weight: 700;
 }
 
-.footer-subscription {
+.footer-container {
+  display: flex;
   width: 1200px;
-  height: 415px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.footer-subscription {
   background-image: url("../img/subscribe-background.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
   color: #ffffff;
+  padding: 96px 258px 104px 258px;
+  text-align: center;
 }
 
 .footer-subscription-title {
@@ -175,12 +233,10 @@ ul {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
-  text-align: center;
 }
 
 .footer-subscription-description {
   font-weight: 400;
-  text-align: center;
 }
 
 .footer-subscription-email {
@@ -196,17 +252,36 @@ ul {
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
-  text-align: center;
   text-transform: uppercase;
 }
 
+.footer-social {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 70px 30px 70px;
+}
+
+.footer-social-list {
+  width: 142px;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
 .footer-company-phone {
+  width: 331px;
   color: inherit;
   font-weight: 400;
   font-size: 40px;
   line-height: 40px;
   text-align: center;
   text-transform: uppercase;
+  text-decoration: none;
+}
+
+.footer-company-link {
+  max-width: 115px;
+  margin-left: auto;
 }
 
 /* Catalog */
