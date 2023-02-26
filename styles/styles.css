@@ -34,15 +34,34 @@ ul {
   list-style-type: none;
 }
 
+/* .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+} */
+
+.page-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
 /* Header */
 .page-header {
   background-color: inherit;
+
 }
 
 .navigation {
   display: flex;
-  margin: 0 auto;
-  width: 1200px;
+  padding-right: 70px;
+  padding-left: 70px;
 }
 
 .logo-link {
@@ -99,12 +118,8 @@ ul {
   flex-grow: 1;
 }
 
-.page-container {
-  width: 1200px;
-  margin: 0 auto;
-}
-
 .welcome {
+  background-color:#756157;
   background-image: url("../img/main/index-background.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -214,12 +229,12 @@ ul {
 
 .footer-container {
   display: flex;
-  width: 1200px;
   margin: 0 auto;
   flex-wrap: wrap;
 }
 
 .footer-subscription {
+  background-color:#756157;
   background-image: url("../img/subscribe-background.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -285,17 +300,24 @@ ul {
 }
 
 /* Catalog */
-.inner-filter {
+.filter-background {
   color: #ffffff;
   background-image: url(../img/catalog/catalog-background.jpg);
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
+  padding: 35px 70px 70px;
 }
 
 .filter-title {
   font-weight: 700;
   font-size: 60px;
   line-height: 78px;
+  margin: 0;
+}
+
+.breadcrumbs {
+  margin: 0;
+  padding: 0;
 }
 
 .breadcrumbs-item-main {
@@ -312,6 +334,34 @@ ul {
   text-decoration: none;
 }
 
+.housing-filter {
+  display: flex;
+}
+
+.filter-facilities, .filter-housing-type {
+  width: 151px;
+  margin-left: 0;
+}
+
+.filter-facilities {
+  margin-right: 70px;
+}
+
+.filter-housing-type {
+  margin-right: 140px;
+}
+
+.filter-price {
+  width: 288px;
+  margin-left: 0;
+  margin-right: 70px;
+}
+
+.filter-buttons {
+  max-width: 191px;
+  margin-left: 0;
+}
+
 .facilities-title, .housing-type-title, .price-title {
   font-weight: 700;
   font-size: 20px;
@@ -319,6 +369,7 @@ ul {
 }
 
 .filter-label {
+  display: block;
   font-weight: 400;
   font-size: 18px;
   line-height: 23px;
@@ -356,11 +407,31 @@ ul {
 }
 
 /* Catalog list */
+.results-page {
+  display: flex;
+  flex-direction: column;
+  width: 1060px;
+  margin: 0 auto;
+  padding-top: 50px;
+  padding-bottom: 60px;
+}
+
+.housing-list-header {
+  display: flex;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
 .housing-list-title {
   color: #000000;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+  text-align: start;
+  width: 340px;
+  margin: 0;
+  padding: 0;
+  margin-right: 192px;
 }
 
 .housing-list-sort, .item-type, .item-price {
@@ -369,12 +440,48 @@ ul {
   line-height: 21px;
 }
 
+.housing-list-sort {
+  width: 292px;
+}
+
+.housing-list-view {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 160px;
+  margin-left: auto;
+}
+
+.housing-items-wrapper {
+  margin: 0 auto;
+}
+
+.housing-list-items {
+  margin: 0;
+  padding: 0;
+}
+
+.housing-item {
+  border: 1px solid #e6e6e6;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 340px;
+  padding: 20px;
+}
+
 .item-link {
   color: #000000;
   text-decoration: none;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
+  display: block;
+}
+
+.item-type-price {
+  display: flex;
+  justify-content: space-between;
 }
 
 .button-favorite {
@@ -395,7 +502,22 @@ ul {
   text-transform: uppercase;
 }
 
+.pagination-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.pagination-item:not(:last-child) {
+  margin-right: 8px;
+}
+
 .pagination-link {
+  display: block;
+  box-sizing: border-box;
+  width: 60px;
+  height: 60px;
+  padding: 11px 23px;
   background-color: #82B3D3;
   border-radius: 4px;
   color: #ffffff;
@@ -405,6 +527,10 @@ ul {
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
+}
+
+.pagination-link:last-child {
+  padding: 11px 16px;
 }
 
 .pagination-prev {
