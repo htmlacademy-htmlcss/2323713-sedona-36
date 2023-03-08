@@ -20,9 +20,6 @@ html {
 
 body {
   margin: 0;
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
   font-family: "Pt Sans", sans-serif;
   font-size: 22px;
   line-height: 26px;
@@ -34,7 +31,7 @@ ul {
   list-style-type: none;
 }
 
-/* .visually-hidden {
+.visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -45,9 +42,12 @@ ul {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-} */
+}
 
 .page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   width: 1200px;
   margin: 0 auto;
 }
@@ -69,6 +69,10 @@ ul {
 }
 
 .navigation-list, .navigation-user {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
   margin: 0;
   padding: 0;
 }
@@ -84,12 +88,17 @@ ul {
 }
 
 .navigation-link, .navigation-user-link {
+  display: block;
   color: #333333;
   text-decoration: none;
-  text-align: left;
+  text-align: center;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
+}
+
+.navigation-link {
+  padding: 20px 16px;
 }
 
 .fav-count {
@@ -111,6 +120,7 @@ ul {
   font-size: 16px;
   line-height: 20px;
   color: #ffffff;
+  padding: 8px 34px;
 }
 
 /* Main page */
@@ -119,10 +129,12 @@ ul {
 }
 
 .welcome {
-  background-color:#756157;
+  background-color:#8d909a;
   background-image: url("../img/main/index-background.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .welcome-img {
@@ -130,13 +142,14 @@ ul {
   margin: 0 auto;
 }
 
-.reasons-header {
+.reasons-header, .services-header {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 69px 0;
   margin: 0 auto;
+  width: 700px;
 }
 
 .reasons-title, .services-title, .search-title {
@@ -144,12 +157,9 @@ ul {
   text-transform: uppercase;
   text-align: center;
   font-weight: 700;
-  font-size: 24px;
-  line-height: 28px;
-}
-
-.reasons-title {
-  width: 620px;
+  font-size: 30px;
+  line-height: 36px;
+  margin: 0;
 }
 
 .reasons-list, .services-list {
@@ -163,19 +173,46 @@ ul {
   flex-wrap: wrap;
 }
 
+.reasons-item {
+  display: flex;
+  width: 400px;
+}
+
+.reasons-item:last-child {
+  flex-direction: row-reverse;
+}
+
+.reasons-description-wrapper {
+  padding: 101px 85px;
+}
+
 .reasons-item-title, .services-item-title {
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
   text-align: center;
+  width: 175px;
+  margin: 0 auto;
 }
 
 .reasons-description, .services-description, .search-description {
   text-align: center;
   font-weight: 400;
+  margin-bottom: 0;
+}
+
+.reasons-image-wrapper {
+  overflow: hidden;
+}
+
+.reasons-img {
+  display: block;
+  height: 100%;
 }
 
 .reasons-town, .reasons-bridge {
+  padding: 0;
+  width: 1200px;
   color: #ffffff;
   background-color: #82B3D3;
 }
@@ -192,6 +229,23 @@ ul {
   font-size: 18px;
   line-height: 21px;
   text-align: center;
+  width: 230px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+}
+
+.reasons-item-description {
+  margin-top: 62px;
+}
+
+.services-item-description {
+  margin-top: 30px;
+}
+
+.services-header {
+  padding: 64px 0;
+  width: 505px;
 }
 
 .services-item {
@@ -209,15 +263,16 @@ ul {
   padding: 96px 304px;
 }
 
+.search-description {
+  margin-bottom: 54px;
+}
+
 .search-link {
-  color: #ffffff;
-  background-color: #756157;
-  text-transform: uppercase;
-  font-weight: 700;
   font-size: 20px;
   line-height: 36px;
-  border-color: #756157;
   text-decoration: none;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 /* Footer */
@@ -244,6 +299,7 @@ ul {
 }
 
 .footer-subscription-title {
+  margin: 0;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
@@ -273,7 +329,9 @@ ul {
 .footer-social {
   display: flex;
   justify-content: space-between;
-  padding: 40px 70px 30px 70px;
+  align-items: center;
+  padding: 40px 70px 30px;
+  width: 1200px;
 }
 
 .footer-social-list {
@@ -284,7 +342,6 @@ ul {
 }
 
 .footer-company-phone {
-  width: 331px;
   color: inherit;
   font-weight: 400;
   font-size: 40px;
