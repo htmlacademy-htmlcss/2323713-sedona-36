@@ -566,6 +566,9 @@ body {
 .housing-list-items {
   margin: 0 auto;
   padding: 0;
+  display: grid;
+  grid-template-columns: 340px 340px 340px;
+  gap: 18px;
 }
 
 .housing-item {
