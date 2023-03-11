@@ -67,21 +67,20 @@ body {
 }
 
 .logo-link {
-  display: block;
+  position: absolute;
 }
 
 .navigation-list, .navigation-user {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
   margin: 0;
   padding: 0;
 }
 
 .navigation-list {
-  width: 339px;
-  margin-left: 30px;
+  width: 340px;
+  margin-left: 168px;
 }
 
 .navigation-user {
@@ -103,7 +102,43 @@ body {
   padding: 20px 16px;
 }
 
+.navigation-link-current {
+  position: relative;
+}
+
+.navigation-link-current::after {
+  position: absolute;
+  left: 17px;
+  bottom: -1px;
+  width: calc(100% - 34px);
+  border-bottom: 2px solid #756257;
+  content: "";
+}
+
+.link-search {
+  background-image: url("../img/search.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 20px;
+  width: 20px;
+  padding: 22px 12px;
+}
+
+.link-fav {
+  background-image: url("../img/heart.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 20px;
+  width: 20px;
+  margin-right: 20px;
+  padding: 22px 12px;
+}
+
 .fav-count {
+  display: block;
+  position: relative;
+  bottom: 10px;
+  left: 9px;
   background-color: #7DB54F;
   border-radius: 10px;
   color: #ffffff;
@@ -111,6 +146,11 @@ body {
   font-weight: 400;
   font-size: 10px;
   line-height: 10px;
+  padding: 4px;
+  box-sizing: border-box;
+  max-width: 25px;
+  max-height: 25px;
+
 }
 
 .button {
@@ -132,12 +172,13 @@ body {
 }
 
 .welcome {
+  padding-top: 51px;
+  padding-bottom: 83px;
   background-color:#8d909a;
-  background-image: url("../img/main/index-background.jpg");
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  background-image: url("../img/main/vector.svg"), url("../img/main/index-background.jpg");
+  background-position: center bottom, center;
+  background-size:  100% auto, cover;
+  background-repeat: no-repeat, no-repeat;
 }
 
 .welcome-img {
@@ -150,9 +191,12 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 69px 0;
   margin: 0 auto;
   width: 700px;
+}
+
+.reasons-header {
+  padding: 69px 0 90px;
 }
 
 .reasons-title, .services-title, .search-title {
