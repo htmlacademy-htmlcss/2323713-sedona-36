@@ -123,6 +123,7 @@ body {
   line-height: 20px;
   color: #ffffff;
   padding: 8px 34px;
+  text-decoration: none;
 }
 
 /* Main page */
@@ -456,7 +457,10 @@ body {
 
 .filter-buttons {
   max-width: 191px;
-  margin-left: 0;
+  margin: 56px 0 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
 }
 
 .facilities-title, .housing-type-title, .price-title {
@@ -497,10 +501,19 @@ body {
 
 .button-add {
   background-color: #82B3D3;
+  padding-left: 50px;
+  padding-right: 50px;
+  border: none;
+  margin-bottom: 32px;
+  cursor: pointer;
 }
 
 .button-reset {
+  padding-left: 57.5px;
+  padding-right: 57.5px;
+  border: none;
   background-color: transparent;
+  cursor: pointer;
 }
 
 /* Catalog list */
@@ -550,21 +563,20 @@ body {
   margin-left: auto;
 }
 
-.housing-items-wrapper {
-  margin: 0 auto;
-}
-
 .housing-list-items {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
 }
 
 .housing-item {
+  /* 340 + 2px for border */
+  width: 342px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
   border: 1px solid #e6e6e6;
   border-radius: 4px;
   box-sizing: border-box;
-  width: 340px;
-  padding: 20px;
 }
 
 .item-link {
@@ -576,17 +588,61 @@ body {
   display: block;
 }
 
+.item-image {
+  display: block;
+  object-fit: contain;
+}
+
+.item-title {
+  margin-top: 16px;
+  margin-bottom: 0;
+  text-align: left;
+  font-size: inherit;
+}
+
 .item-type-price {
   display: flex;
   justify-content: space-between;
+  margin-top: 16px;
+}
+
+.item-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  margin-top: 16px;
+}
+
+.button-more {
+  display: inline-block;
+  max-width: 140px;
+  margin-right: 20px;
+  padding-left: 26px;
+  padding-right: 26px;
 }
 
 .button-favorite {
   background-color: #82B3D3;
+  display: inline-block;
+  max-width: 140px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .button-selected {
   background-color: #7DB54F;
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+.item-grades {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 16px;
 }
 
 .item-grade {
@@ -597,6 +653,11 @@ body {
   line-height: 20px;
   text-align: center;
   text-transform: uppercase;
+  padding: 9px 22px 8px 23px;
+}
+
+.pagination {
+  margin-top: 80px;
 }
 
 .pagination-list {
