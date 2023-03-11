@@ -56,7 +56,7 @@
               <p class="reasons-description">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
             </div>
             <ul class="reasons-list modified-ul">
-              <li class="reasons-item reasons-town">
+              <li class="reasons-item-block reasons-town">
                 <div class="reasons-description-wrapper">
                   <h3 class="reasons-item-title">Настоящий городок</h3>
                   <p class="reasons-item-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
@@ -66,24 +66,18 @@
                 </div>
               </li>
               <li class="reasons-item reasons-area">
-                <div class="reasons-description-wrapper">
-                  <h3 class="reasons-item-title">Небольшая площадь</h3>
-                  <p class="reasons-item-description">Все достопримечательности находятся очень близко</p>
-                </div>
+                <h3 class="reasons-item-title">Небольшая площадь</h3>
+                <p class="reasons-item-description">Все достопримечательности находятся очень близко</p>
               </li>
               <li class="reasons-item reasons-road">
-                <div class="reasons-description-wrapper">
-                  <h3 class="reasons-item-title">Красивая дорога</h3>
-                  <p class="reasons-item-description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
-                </div>
+                <h3 class="reasons-item-title">Красивая дорога</h3>
+                <p class="reasons-item-description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
               </li>
               <li class="reasons-item reasons-tourist">
-                <div class="reasons-description-wrapper">
-                  <h3 class="reasons-item-title">Мало туристов</h3>
-                  <p class="reasons-item-description">Большинство едет в Гранд Каньон и толпится там</p>
-                </div>
+                <h3 class="reasons-item-title">Мало туристов</h3>
+                <p class="reasons-item-description">Большинство едет в Гранд Каньон и толпится там</p>
               </li>
-              <li class="reasons-item reasons-bridge">
+              <li class="reasons-item-block reasons-bridge">
                 <div class="reasons-description-wrapper">
                   <h3 class="reasons-item-title">Там есть мост дьявола</h3>
                   <p class="reasons-item-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
@@ -118,7 +112,7 @@
 
           <section class="search">
             <h2 class="search-title">Заинтересовались?</h2>
-            <p class="search-description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+            <p class="search-description">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
             <a class="button search-link" href="#">Поиск гостиницы в Седоне</a>
           </section>
       </main>
@@ -128,15 +122,15 @@
             <h2 class="footer-subscription-title">Подпишитесь на рассылку</h2>
             <p class="footer-subscription-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
             <form class="footer-subscription-form" action="https://echo.htmlacademy.ru/" method="post">
-              <input id="footer-subscription-email" name="email" type="email" placeholder="Ваш e-mail" required>
-              <button class="footer-subscription-button" type="submit">Подписаться</button>
+              <input class="footer-subscription-email" id="footer-subscription-email" name="email" type="email" placeholder="Ваш e-mail" required>
+              <button class="button footer-subscription-button" type="submit">Подписаться</button>
             </form>
           </section>
 
           <section class="footer-social">
             <h2 class="visually-hidden">Ищите нас в социальных сетях</h2>
             <ul class="footer-social-list modified-ul">
-              <li class="footer-social-item">
+              <li class="footer-social-item-vk">
                 <a class="social-button" href="https://vk.com/htmlacademy">
                   <svg width="24" height="14" viewBox="0 0 24 14" fill="none" role="img" aria-label="VK" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -145,16 +139,16 @@
                   </svg>
                 </a>
               </li>
-              <li class="footer-social-item">
+              <li class="footer-social-item-telegram">
                 <a class="social-button" href="https://t.me/htmlacademy">
-                  <svg width="18" height="15" viewBox="0 0 18 15" fill="none" role="img" aria-label="Telegram" xmlns="http://www.w3.org/2000/svg">
+                  <svg width="18" height="16" viewBox="0 0 18 16" fill="none" role="img" aria-label="Telegram" xmlns="http://www.w3.org/2000/svg">
                     <path
                       d="M16.785 0.955705L0.840489 7.1042C-0.247661 7.54126 -0.241365 8.14828 0.640845 8.41897L4.73445 9.69597L14.2058 3.72014C14.6537 3.44766 15.0629 3.59424 14.7265 3.89281L7.05283 10.8183H7.05103L7.05283 10.8192L6.77045 15.0387C7.18413 15.0387 7.36669 14.8489 7.59871 14.625L9.58705 12.6915L13.7229 15.7464C14.4855 16.1664 15.0332 15.9506 15.2229 15.0405L17.9379 2.2453C18.2158 1.13107 17.5126 0.626562 16.785 0.955705Z"
                       fill="#83B3D3" />
                   </svg>
                 </a>
               </li>
-              <li class="footer-social-item">
+              <li class="footer-social-item-youtube">
                 <a class="social-button" href="https://www.youtube.com/user/htmlacademyru">
                   <svg width="22" height="17" viewBox="0 0 22 17" fill="none" role="img" aria-label="YouTube" xmlns="http://www.w3.org/2000/svg">
                     <path
