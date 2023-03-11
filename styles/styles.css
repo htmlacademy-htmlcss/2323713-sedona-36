@@ -243,8 +243,23 @@ body {
   line-height: 28px;
   text-transform: uppercase;
   text-align: center;
-  width: 175px;
+  width: 172px;
   margin: 0 auto;
+  position: relative;
+}
+
+.reasons-item-title::after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 60px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  bottom: -31px;
+  right: 56px;
+}
+
+.white-item-title::after {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 .reasons-description, .services-description, .search-description {
@@ -300,6 +315,11 @@ body {
   margin-top: 30px;
 }
 
+.housing-description {
+  padding: 0 25px;
+  box-sizing: border-box;
+}
+
 .services-header {
   padding: 64px 0;
   width: 505px;
@@ -308,6 +328,31 @@ body {
 .services-item {
   background-color: rgba(131, 179, 211, 0.12);
   padding: 81px 85px;
+}
+
+.services-item-title {
+  padding-top: 102px;
+}
+
+.services-item-title::before {
+  position: absolute;
+  top: 0;
+}
+
+.title-housing::before {
+  content: url("../img/main/housing.svg");
+  left: 48px;
+}
+
+.title-food::before {
+  content: url("../img/main/food.svg");
+  left: 49px;
+}
+
+.title-souvenir::before {
+  content: url("../img/main/souvenir.svg");
+  left: 53px;
+  top: -2px;
 }
 
 .item-food {
@@ -330,6 +375,7 @@ body {
   text-decoration: none;
   padding-left: 50px;
   padding-right: 50px;
+  display: inline-block;
 }
 
 /* Footer */
