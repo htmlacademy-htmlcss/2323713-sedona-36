@@ -488,6 +488,12 @@ body {
 }
 
 /* Catalog */
+.catalog-inner {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+
 .inner-filter {
   color: #ffffff;
   background-image: url(../img/catalog/catalog-background.jpg);
