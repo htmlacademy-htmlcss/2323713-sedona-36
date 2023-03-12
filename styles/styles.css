@@ -781,6 +781,7 @@ body {
   display: flex;
   margin: 0 auto;
   margin-bottom: 40px;
+  align-items: center;
 }
 
 .housing-list-title {
@@ -792,7 +793,7 @@ body {
   width: 340px;
   margin: 0;
   padding: 0;
-  margin-right: 192px;
+  margin-right: 200px;
 }
 
 .housing-list-sort, .item-type, .item-price {
@@ -803,15 +804,44 @@ body {
 
 .housing-list-sort {
   width: 292px;
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  background-image: url("../img/catalog/arrow-down.svg");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  background-color: #ffffff;
+  color: #333333;
+  appearance: none;
+  border: 2px solid rgba(229, 229, 229, 1);
+  border-radius: 4px;
+  padding: 12px 40px 12px 20px;
 }
 
 .housing-list-view {
-  margin: 0;
+  margin: 0 0 0 auto;
   padding: 0;
   display: flex;
-  justify-content: space-between;
-  width: 160px;
-  margin-left: auto;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 9px;
+  width: 170px;
+}
+
+.view-toggle {
+  display: block;
+  box-sizing: border-box;
+  min-height: 14px;
+  min-width: 16px;
+  padding: 11px 14px;
+  border: 2px solid #e5e5e5;
+  border-radius: 4px;
+}
+
+.view-toggle-selected {
+  border-color: #000000;
 }
 
 .housing-list-items {
@@ -819,15 +849,13 @@ body {
   padding: 0;
   display: grid;
   grid-template-columns: 340px 340px 340px;
-  gap: 18px;
+  gap: 20px;
 }
 
 .housing-item {
   /* 340 + 2px for border */
-  width: 342px;
+  width: 340px;
   padding: 20px;
-  display: flex;
-  flex-direction: column;
   border: 1px solid #e6e6e6;
   border-radius: 4px;
   box-sizing: border-box;
@@ -872,7 +900,6 @@ body {
 .button-more {
   display: inline-block;
   max-width: 140px;
-  margin-right: 20px;
   padding-left: 26px;
   padding-right: 26px;
 }
@@ -897,6 +924,24 @@ body {
   align-items: center;
   flex-wrap: wrap;
   margin-top: 16px;
+}
+
+.stars {
+  background: url("../img/catalog/star.svg") space 0 0;
+  height: 17px;
+  margin: 0;
+}
+
+.stars-four {
+  width: 89px;
+}
+
+.stars-three {
+  width: 66px;
+}
+
+.stars-two {
+  width: 40px;
 }
 
 .item-grade {
