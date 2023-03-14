@@ -115,7 +115,7 @@
           <section class="search">
             <h2 class="search-title">Заинтересовались?</h2>
             <p class="search-description">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-            <a class="button search-link" href="#" onclick="openModal()">Поиск гостиницы в Седоне</a>
+            <a class="button search-link" href="#" onclick="return openModal()">Поиск гостиницы в Седоне</a>
           </section>
       </main>
 
@@ -182,7 +182,7 @@
       </footer>
     </div>
 
-    <div class="modal-container modal-container-open">
+    <div class="modal-container">
         <div class="modal-search">
           <section class="search-content">
             <h2 class="search-form-title">Поиск гостиницы в Седоне</h2>
@@ -233,7 +233,7 @@
               <button type="submit" class="button search-button">Найти</button>
             </form>
           </section>
-          <button class="modal-close-button" type="button" onclick="closeModal()">
+          <button class="modal-close-button" type="button" onclick="return closeModal()">
             <span class="visually-hidden">Закрыть окно c поиском гостиницы.</span>
             <svg class="close-button-svg" aria-hidden="true" focusable="false" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M14.4905 1.78288L13.1982 0.49057L7.49048 6.19826L1.78279 0.49057L0.490479 1.78288L6.19817 7.49057L0.490479 13.1983L1.78279 14.4906L7.49048 8.78288L13.1982 14.4906L14.4905 13.1983L8.78279 7.49057L14.4905 1.78288Z"></path>

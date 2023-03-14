@@ -614,7 +614,7 @@ body {
 
 .inner-filter {
   color: #ffffff;
-  background-color: #333333;
+  background-color: #aea1a1;
   background-image: url(../img/catalog/catalog-background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -886,7 +886,7 @@ body {
   outline: 3px solid #83B3D3;
 }
 
-.price-range-min:not(:placeholder-shown), .price-range-max:not(:placeholder-shown) {
+.price-range-min:focus:where(:not(:placeholder-shown)), .price-range-max:focus:where(:not(:placeholder-shown)) {
   background: #F2F2F2;
   outline: 2px solid #000000;
 }
@@ -1345,12 +1345,12 @@ body {
 .modal-search {
   width: 717px;
   position: relative;
-  margin: auto;
-  padding: 64px 70px;
   background-color: #ffffff;
   box-shadow: 0 25px 50px rgb(0 0 0 / 15%);
   border-radius: 30px;
   box-sizing: border-box;
+  margin: auto;
+  padding: 64px 70px;
 }
 
 .modal-container-open {
@@ -1414,6 +1414,20 @@ body {
   border-radius: 4px;
 }
 
+.date-field:hover, .counter-input:hover {
+  background-color: #E6E6E6;
+}
+
+.date-field:focus, .counter-input:focus {
+  background-color: #E6E6E6;
+  outline: 3px solid #83B3D3;
+}
+
+.date-field:focus:where(:not(:placeholder-shown)),
+.counter-input:focus:where(:not(:placeholder-shown)) {
+  outline: 2px solid #000000;
+}
+
 .date-field-error {
   display: block;
   margin-top: 4px;
@@ -1467,8 +1481,16 @@ body {
   fill: #3F5E72;
 }
 
+.kids-tooltip:focus {
+  outline: none;
+}
+
 .tooltip-icon {
   fill: #83B3D3;
+}
+
+.kids-tooltip:focus .tooltip-icon {
+  fill: #3F5E72;
 }
 
 .kids-tooltip:hover .tooltip-text,
@@ -1529,14 +1551,44 @@ body {
   padding: 0;
 }
 
+.counter-button:focus {
+  z-index: 1;
+}
+
 .button-minus {
   background-image: url("../img/main/modal/minus.svg");
   border-radius: 4px 0 0 4px;
 }
 
+.button-minus:hover {
+  background-image: url("../img/main/modal/minus-dark.svg");
+}
+
+.button-minus:focus {
+  background-image: url("../img/main/modal/minus-dark.svg"), url(../img/main/modal/outline-for-counter.svg);
+  outline: none;
+}
+
+.button-minus:active {
+  background-image: url("../img/main/modal/minus.svg");
+}
+
 .button-plus {
   background-image: url("../img/main/modal/plus.svg");
   border-radius: 0 4px 4px 0;
+}
+
+.button-plus:hover {
+  background-image: url("../img/main/modal/plus-dark.svg");
+}
+
+.button-plus:focus {
+  background-image: url("../img/main/modal/plus-dark.svg"), url(../img/main/modal/outline-for-counter.svg);
+  outline: none;
+}
+
+.button-plus:active {
+  background-image: url("../img/main/modal/plus-dark.svg");
 }
 
 .counter-input::-webkit-outer-spin-button, .counter-input::-webkit-inner-spin-button {
@@ -1558,6 +1610,10 @@ body {
   border: none;
   padding: 0 10px;
   cursor: pointer;
+}
+
+.counter-input:focus {
+  z-index: 1;
 }
 
 .search-button {
@@ -1597,6 +1653,24 @@ body {
   border-radius: 50%;
   border: none;
   cursor: pointer;
+}
+
+.modal-close-button:hover {
+  background-color: #E6E6E6;
+}
+
+.modal-close-button:focus {
+  background-color: #E6E6E6;
+  outline: 3px solid #83B3D3;
+}
+
+.modal-close-button:active {
+  outline: none;
+}
+
+.modal-close-button:active .close-button-svg  {
+  fill:#000000;
+  opacity: 0.3;
 }
 
 .close-button-svg {
