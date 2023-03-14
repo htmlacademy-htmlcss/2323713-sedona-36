@@ -1,4 +1,4 @@
-function openModal(evt) {
+function openModal() {
   document.querySelector('.modal-container').classList
     .add('modal-container-open');
   return false;
