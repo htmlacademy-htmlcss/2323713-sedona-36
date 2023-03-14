@@ -1457,12 +1457,14 @@ body {
   text-align: center;
   padding: 0;
   margin-right: 46px;
+  width: 91px;
 }
 
 .number-kids-label {
   text-align: center;
   padding: 0;
   margin-right: 83px;
+  width: 49px;
 }
 
 .kids-tooltip {
