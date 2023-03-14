@@ -653,6 +653,20 @@ body {
   cursor: pointer;
 }
 
+.breadcrumbs-item:not(:first-child) .breadcrumbs-link::before {
+  position: absolute;
+  bottom: 5px;
+  left: -16px;
+  content: "";
+  width: 6.39px;
+  height: 9.94px;
+  background-image: url("../img/catalog/arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: initial;
+}
+
+
 .breadcrumbs-link:hover {
   color: rgba(255, 255, 255, 0.6);
 }
@@ -668,19 +682,6 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-}
-
-.link-main::after {
-  position: absolute;
-  bottom: 1px;
-  left: 24px;
-  content: "";
-  width: 6.39px;
-  height: 9.94px;
-  background-image: url("../img/catalog/arrow.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  cursor: initial;
 }
 
 .housing-filter {
