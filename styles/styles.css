@@ -1357,6 +1357,10 @@ body {
   display: flex;
 }
 
+.search-content {
+  color: #000000;
+}
+
 .search-form-title {
   margin: 0;
   font-weight: 700;
@@ -1407,6 +1411,7 @@ body {
   line-height: 24px;
   font-weight: 700;
   width: 100%;
+  border-radius: 4px;
 }
 
 .date-field-error {
@@ -1416,6 +1421,7 @@ body {
   font-size: 16px;
   line-height: 21px;
   font-weight: 400;
+  color: #333333;
 }
 
 .error-red {
@@ -1430,6 +1436,7 @@ body {
   line-height: 24px;
   font-weight: 700;
   align-items: center;
+  position: relative;
 }
 
 .number-adults-label {
@@ -1441,7 +1448,64 @@ body {
 .number-kids-label {
   text-align: center;
   padding: 0;
-  margin-right: 82px;
+  margin-right: 83px;
+}
+
+.kids-tooltip {
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  right: 158px;
+  bottom: 8px;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+
+.kids-tooltip:hover .tooltip-icon {
+  fill: #3F5E72;
+}
+
+.tooltip-icon {
+  fill: #83B3D3;
+}
+
+.kids-tooltip:hover .tooltip-text,
+.kids-tooltip:focus .tooltip-text {
+  display: block;
+}
+
+.tooltip-text::before {
+  position: absolute;
+  top: -15px;
+  left: 119px;
+  content: url("../img/main/modal/triangle.svg");
+  width: 9px;
+  height: 19px;
+  background-repeat: no-repeat;
+  background-position: center 0;
+}
+
+.tooltip-text {
+  display: none;
+  background: #333333;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+  font-family: "Pt Sans", sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: none;
+  text-align: left;
+  padding: 19px 20px 23px 21px;
+  border-radius: 10px;
+  width: 216px;
+  position: absolute;
+  left: 12px;
+  top: 42px;
+  transform: translateX(-50%);
 }
 
 .counter-container {
@@ -1467,10 +1531,12 @@ body {
 
 .button-minus {
   background-image: url("../img/main/modal/minus.svg");
+  border-radius: 4px 0 0 4px;
 }
 
 .button-plus {
   background-image: url("../img/main/modal/plus.svg");
+  border-radius: 0 4px 4px 0;
 }
 
 .counter-input::-webkit-outer-spin-button, .counter-input::-webkit-inner-spin-button {
