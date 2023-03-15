@@ -6,6 +6,7 @@
     <title>HTML Academy: Седона</title>
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
     <link rel="stylesheet" href="styles/styles.css"/>
+    <script src="scripts/script.js"></script>
   </head>
 
   <body>
@@ -29,12 +30,12 @@
           <ul class="navigation-user modified-ul">
             <li class="navigation-user-item">
               <a class="navigation-user-link link-search" href="#">
-                <span class="visually-hidden">Поиск</span>
+                <span class="visually-hidden">Поиск.</span>
               </a>
             </li>
             <li class="navigation-user-item">
               <a class="navigation-user-link link-fav" href="#">
-                <span class="visually-hidden">Избранное</span>
+                <span class="visually-hidden">Избранное.</span>
                 <span class="fav-count">12</span>
               </a>
             </li>
@@ -114,7 +115,7 @@
           <section class="search">
             <h2 class="search-title">Заинтересовались?</h2>
             <p class="search-description">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-            <a class="button search-link" href="#">Поиск гостиницы в Седоне</a>
+            <a class="button search-link" href="#" onclick="return openModal()">Поиск гостиницы в Седоне</a>
           </section>
       </main>
 
@@ -129,7 +130,7 @@
           </section>
 
           <section class="footer-social">
-            <h2 class="visually-hidden">Ищите нас в социальных сетях</h2>
+            <h2 class="visually-hidden">Ищите нас в социальных сетях.</h2>
             <ul class="footer-social-list modified-ul">
               <li class="footer-social-item-vk">
                 <a class="social-button" href="https://vk.com/htmlacademy">
@@ -181,6 +182,65 @@
       </footer>
     </div>
 
+    <div class="modal-container">
+        <div class="modal-search">
+          <section class="search-content">
+            <h2 class="search-form-title">Поиск гостиницы в Седоне</h2>
+            <form class="search-form" method="get" action="https://echo.htmlacademy.ru/">
+              <div class="date-form">
+                <label class="date-label" for="date_from">Дата Заезда:</label>
+                <div class="date-input-container">
+                  <input class="date-field" id="date_from" value="27 апреля 2020" placeholder="Укажите дату заезда" type="text" name="date-field" required>
+                  <span class="date-field-error error-red">Мы не можем отправить вас в прошлое.</span>
+                </div>
+              </div>
+              <div class="date-form">
+                <label class="date-label" for="date_to">Дата Выезда:</label>
+                <div class="date-input-container">
+                  <input class="date-field" id="date_to" value="1 сентября 2021" placeholder="Укажите дату выезда" type="text" name="date-field" required>
+                  <span class="date-field-error">На эти даты есть свободные номера. Пока есть.</span>
+                </div>
+              </div>
+              <div class="person-number">
+                <label class="number-adults-label" for="adults">Взрослые:</label>
+                <div class="counter-container">
+                  <button class="button-minus counter-button" type="button">
+                    <span class="visually-hidden">Уменьшить количество взрослых на 1.</span>
+                  </button>
+                  <input class="counter-input" value="2" placeholder="" type="number" name="adults" id="adults" required>
+                  <button class="button-plus counter-button" type="button">
+                    <span class="visually-hidden">Увеличить количество взрослых на 1.</span>
+                  </button>
+                </div>
+                <label class="number-kids-label" for="kids">Дети:</label>
+                <button type="button" class="kids-tooltip">
+                  <svg class="tooltip-icon" aria-hidden="true" focusable="false" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="13" cy="13" r="13"></circle>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7H14V9H12V7ZM14 19H12V10H14V19Z" fill="white"></path>
+                  </svg>
+                  <span class="tooltip-text" id="tooltip-label-date">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+                </button>
+                <div class="counter-container">
+                  <button class="button-minus counter-button" type="button">
+                    <span class="visually-hidden">Уменьшить количество детей на 1.</span>
+                  </button>
+                  <input class="counter-input" value="2" placeholder="" type="number" name="kids" id="kids" required>
+                  <button class="button-plus counter-button" type="button">
+                    <span class="visually-hidden">Увеличить количество детей на 1.</span>
+                  </button>
+                </div>
+              </div>
+              <button type="submit" class="button search-button">Найти</button>
+            </form>
+          </section>
+          <button class="modal-close-button" type="button" onclick="return closeModal()">
+            <span class="visually-hidden">Закрыть окно c поиском гостиницы.</span>
+            <svg class="close-button-svg" aria-hidden="true" focusable="false" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14.4905 1.78288L13.1982 0.49057L7.49048 6.19826L1.78279 0.49057L0.490479 1.78288L6.19817 7.49057L0.490479 13.1983L1.78279 14.4906L7.49048 8.78288L13.1982 14.4906L14.4905 13.1983L8.78279 7.49057L14.4905 1.78288Z"></path>
+            </svg>
+          </button>
+        </div>
+    </div>
   </body>
 
 </html>
