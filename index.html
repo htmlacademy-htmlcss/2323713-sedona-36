@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.ico">
     <link rel="stylesheet" href="styles/styles.css">
     <script src="scripts/script.js"></script>
   </head>
@@ -64,7 +64,7 @@
                   <p class="reasons-item-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
                 </div>
                 <div class="reasons-image-wrapper">
-                  <img class="reasons-img" src="img/main/house-trees.jpg" width="800" height="384" alt="Дом среди деревьев.">
+                  <img class="reasons-img" src="img/main/house-trees.jpg" width="800" height="385" alt="Дом среди деревьев.">
                 </div>
               </li>
               <li class="reasons-item reasons-area">
@@ -85,7 +85,7 @@
                   <p class="reasons-item-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
                 </div>
                 <div class="reasons-image-wrapper">
-                  <img class="reasons-img" src="img/main/devil-bridge.jpg" width="800" height="384" alt="Мост дьявола.">
+                  <img class="reasons-img" src="img/main/devil-bridge.jpg" width="800" height="385" alt="Мост дьявола.">
                 </div>
               </li>
             </ul>
@@ -115,7 +115,7 @@
           <section class="search">
             <h2 class="search-title">Заинтересовались?</h2>
             <p class="search-description">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-            <a class="button search-link" href="#" onclick="return openModal()">Поиск гостиницы в Седоне</a>
+            <button type="button" class="button search-link" onclick="return openModal()">Поиск гостиницы в Седоне</button>
           </section>
       </main>
 
@@ -186,7 +186,7 @@
         <div class="modal-search">
           <section class="search-content">
             <h2 class="search-form-title">Поиск гостиницы в Седоне</h2>
-            <form class="search-form" method="get" action="https://echo.htmlacademy.ru/">
+            <form class="search-form" method="post" action="https://echo.htmlacademy.ru/">
               <div class="date-form">
                 <label class="date-label" for="date_from">Дата Заезда:</label>
                 <div class="date-input-container">
