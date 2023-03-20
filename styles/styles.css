@@ -70,6 +70,10 @@ body {
   position: absolute;
 }
 
+.logo-link:focus-visible {
+  outline: none;
+}
+
 .navigation-list,
 .navigation-user {
   display: flex;
@@ -109,7 +113,7 @@ body {
   color: #68A2CA;
 }
 
-.navigation-link:focus {
+.navigation-link:focus, .navigation-link:focus-visible {
   outline-color: #81B3D3;
 }
 
@@ -204,6 +208,10 @@ body {
 
 .button:focus {
   background-color: #615048;
+}
+
+.button:focus-visible {
+  outline: none;
 }
 
 .button:active {
@@ -597,7 +605,7 @@ body {
   outline: none;
 }
 
-.footer-social-button:focus-visible {
+.social-button:focus-visible {
   outline: none;
 }
 
@@ -820,6 +828,10 @@ body {
   display: inline-block;
 }
 
+.filter-control:focus-visible {
+  outline: none;
+}
+
 .control-selected {
   position: absolute;
   top: 2px;
@@ -835,7 +847,7 @@ body {
   opacity: 0.6;
 }
 
-.control-label:focus {
+.control-label:focus, .control-label:focus-visible {
   outline: none;
 }
 
@@ -860,7 +872,8 @@ body {
   border-radius: 4px;
 }
 
-.control-input[type="checkbox"]:focus + .control-selected {
+.control-input[type="checkbox"]:focus + .control-selected,
+.control-input[type="checkbox"]:focus-visible + .control-selected {
   outline: 3px solid #83b3d3;
 }
 
@@ -887,7 +900,8 @@ body {
   opacity: 0.6;
 }
 
-.control-input[type="radio"]:focus + .control-selected {
+.control-input[type="radio"]:focus + .control-selected,
+.control-input[type="radio"]:focus-visible + .control-selected {
   outline: 3px solid #83b3d3;
   border-radius: 18px;
 }
@@ -1014,7 +1028,7 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
-.price-setter:focus {
+.price-setter:focus, .price-setter:focus-visible {
   outline: 3px solid #83B3D3;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
@@ -1145,7 +1159,7 @@ body {
   border-color: #68a2ca;
 }
 
-.housing-list-sort:focus {
+.housing-list-sort:focus, .housing-list-sort:focus-visible {
   border-color: #68a2ca;
   outline: none;
 }
@@ -1189,7 +1203,7 @@ body {
   border: 2px solid #000;
 }
 
-.view-toggle:focus {
+.view-toggle:focus, .view-toggle:focus-visible {
   border: 2px solid #68A2CA;
   outline: none;
 }
@@ -1374,7 +1388,7 @@ body {
   background-color: #68A2CA;
 }
 
-.pagination-link:focus {
+.pagination-link:focus, .pagination-link:focus-visible {
   background-color: #68a2ca;
   outline: none;
 }
